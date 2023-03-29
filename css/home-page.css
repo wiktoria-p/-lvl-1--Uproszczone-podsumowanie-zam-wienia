@@ -334,6 +334,9 @@ template {
   border-radius: 16px;
   background-color: var(--color-container);
 }
+.home-page_content-container img {
+  border-radius: 16px 16px 0px 0px;
+}
 .home-page_content-container_statement {
   width: 347px;
   height: 112px;
@@ -354,15 +357,79 @@ template {
   margin-top: 40px;
 }
 .home-page_content-container_selected-subscription i {
-  width: 24px;
-  height: 24px;
+  font-size: 24px;
   margin: 30px;
 }
 .home-page_content-container_selected-subscription_price {
   color: var(--color-body-font);
+  height: 50px;
   font-size: 14px;
+  text-align: start;
+  padding-left: 32px;
+  margin: 17px 0px 17px 0px;
+  border-left: 2px solid var(--color-stroke);
 }
 .home-page_content-container_selected-subscription_price h2 {
   font-size: 18px;
   color: var(--color-title);
+}
+.home-page_content-container_selected-subscription a {
+  color: var(--color-primary);
+  margin: 29px 32px 29px 0px;
+  font-weight: bold;
+}
+.home-page_content-container_payment-confirmation {
+  width: 428px;
+  height: 56px;
+  background-color: var(--color-primary);
+  color: var(--color-container);
+  border-radius: 16px;
+  margin-top: 32px;
+  border-style: none;
+}
+.home-page_content-container_cancel-order {
+  margin-top: 20px;
+  margin-bottom: 32px;
+  color: var(--color-title);
+  font-weight: bold;
+}
+@media screen and (max-width: 1024px) {
+  .home-page_content-contaniner {
+    padding-top: 304px;
+    width: 343px;
+    font-size: 14px;
+  }
+  .home-page_content-contaniner_statement {
+    width: 311px;
+    height: 93px;
+    margin-top: 40px;
+  }
+  .home-page_content-contaniner_statement h1 {
+    font-size: 24px;
+    color: var(--color-title);
+  }
+  .home-page_content-contaniner_selected-subscription {
+    width: 311px;
+    height: 75px;
+  }
+  .home-page_content-contaniner_selected-subscription i {
+    font-size: 24px;
+    margin: 25px;
+  }
+  .home-page_content-contaniner_selected-subscription_price {
+    height: 43px;
+    font-size: 12px;
+    padding-left: 24px;
+    margin: 16px 0px 16px 0px;
+  }
+  .home-page_content-contaniner_selected-subscription_price h2 {
+    font-size: 16px;
+  }
+  .home-page_content-contaniner_selected-subscription a {
+    margin: 27px 24px 27px 0px;
+    font-weight: bold;
+  }
+  .home-page_content-contaniner_payment-confirmation {
+    width: 311px;
+  }
 }/*# sourceMappingURL=home-page.css.map */

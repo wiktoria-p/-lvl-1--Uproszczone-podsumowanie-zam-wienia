@@ -2,6 +2,10 @@
 @use "../../../global-styles/styles/root.scss";
 @use "../../../global-styles/styles/fonts.scss";
 
+$borderRadius: 16px;
+$elementWidth: 428px;
+$mediaElementWidth: 311px;
+
 .home-page{
     width: 100%;
     min-height: 100vh;
@@ -14,8 +18,12 @@
         margin: 0 auto;
         align-items: center; 
         text-align: center;
-        border-radius: 16px;
+        border-radius: $borderRadius;
         background-color: var(--color-container);
+
+        img{
+            border-radius: 16px 16px 0px 0px;
+        }
 
         &_statement{
             width: 347px;
@@ -34,26 +42,106 @@
 
         &_selected-subscription{
             background-color: var(--color-background);
-            border-radius: 16px;
-            width: 428px;
+            border-radius: $borderRadius;
+            width: $elementWidth;
             height: 83px;
             margin-top: 40px;
 
             i{
-                width: 24px;
-                height: 24px;
+                font-size: 24px;
                 margin: 30px;
             }
 
             &_price{
                 color: var(--color-body-font);
+                height: 50px;
                 font-size: 14px;
+                text-align: start;
+                padding-left: 32px;
+                margin: 17px 0px 17px 0px;
+                border-left: 2px solid var(--color-stroke);
+                
 
                 h2{
                     font-size: 18px;
                     color: var(--color-title);
                 }
             }
+
+            a{
+                color: var(--color-primary);
+                margin: 29px 32px 29px 0px;
+                font-weight: bold;
+            }
+        }
+
+        &_payment-confirmation{
+            width: $elementWidth;
+            height: 56px;
+            background-color: var(--color-primary);
+            color: var(--color-container);
+            border-radius: $borderRadius;
+            margin-top: 32px;
+            border-style: none;
+        }
+
+        &_cancel-order{
+            margin-top: 20px;
+            margin-bottom: 32px;
+            color: var(--color-title);
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        
+        &_content-contaniner{
+            padding-top: 304px;
+            width: 343px;
+            font-size: 14px;
+
+            &_statement{
+                width: $mediaElementWidth;
+                height: 93px;
+                margin-top: 40px;
+
+                h1{
+                    font-size: 24px;
+                    color: var(--color-title);
+                }
+            }
+
+            &_selected-subscription{
+                width: $mediaElementWidth;
+                height: 75px;
+    
+                i{
+                    font-size: 24px;
+                    margin: 25px;
+                }
+    
+                &_price{
+                    height: 43px;
+                    font-size: 12px;
+                    padding-left: 24px;
+                    margin: 16px 0px 16px 0px;
+                    
+    
+                    h2{
+                        font-size: 16px;
+                    }
+                }
+    
+                a{
+                    margin: 27px  24px 27px 0px;
+                    font-weight: bold;
+                }
+            }
+    
+            &_payment-confirmation{
+                width: $mediaElementWidth;
+            }
+        
         }
     }
 }
