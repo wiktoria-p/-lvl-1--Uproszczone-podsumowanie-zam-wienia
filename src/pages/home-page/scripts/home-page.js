@@ -3,6 +3,17 @@
 
 import '../styles/home-page.scss'
 
-import { setupCounter } from '../../../global-scripts/scripts/counter/counter.js'
+let button = document.getElementById('btn');
+let text = document.getElementById('btn-text');
+let textLoad = document.getElementById('btn-load')
+let spin = document.getElementById('spinner-border');
 
-setupCounter(document.querySelector('#counter'))
+function loading() {
+    spin.classList.add('spinner-border');
+    textLoad.classList.toggle('home-page_content-container_payment-confirmation_btn-load-active');
+    text.classList.toggle('home-page_content-container_payment-confirmation_btn-text-none');
+
+}
+
+button.addEventListener('click', loading);
+

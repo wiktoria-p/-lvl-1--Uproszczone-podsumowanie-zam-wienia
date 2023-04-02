@@ -14,7 +14,7 @@
 <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
 
 <body>
-  <div id="" class="home-page">
+  <div id="" class="d-flex justify-content-center home-page">
     <div class="d-flex flex-column home-page_content-container">
       
       <img src="public/images/img/AdobeStock_331830515 1.png" alt="">
@@ -33,13 +33,18 @@
         <a href="#">Change</a>
       </section>
 
-      <button class="home-page_content-container_payment-confirmation">Proceed to Payment</button>
+      <button id="btn" class="d-flex flex-row justify-content-center home-page_content-container_payment-confirmation">
+          <span id="spinner-border"></span>
+          <p id="btn-text" class="home-page_content-container_payment-confirmation_btn-text">Proceed to Payment</p>
+          <p id="btn-load" class="home-page_content-container_payment-confirmation_btn-load">While charging</p>
+      </button>
       <a href="#" class="home-page_content-container_cancel-order">Cancel Order</a>
     </div>
   </div>
 
-  <script type="module" src="/src/global-scripts/main.js"></script>
-  <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
+  <script type="module" src="src/global-scripts/main.js"></script>
+  <script type="module" src="src/pages/home-page/scripts/home-page.js"></script>
+  
 </body>
 
 </html>
