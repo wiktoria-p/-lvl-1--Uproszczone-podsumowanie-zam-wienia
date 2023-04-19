@@ -325,7 +325,8 @@ template {
   background-color: var(--color-background);
   font-size: 16px;
 }
-.home-page_content-container {
+
+.content-container {
   width: 460px;
   position: absolute;
   top: 50%;
@@ -335,10 +336,10 @@ template {
   border-radius: 16px;
   background-color: var(--color-container);
 }
-.home-page_content-container img {
+.content-container img {
   border-radius: 16px 16px 0px 0px;
 }
-.home-page_content-container_statement {
+.content-container__statement {
   width: 347px;
   height: 112px;
   margin-top: 32px;
@@ -346,22 +347,22 @@ template {
   gap: 16px;
   letter-spacing: -0.01em;
 }
-.home-page_content-container_statement h1 {
+.content-container__statement h1 {
   font-size: 38px;
   color: var(--color-title);
 }
-.home-page_content-container_selected-subscription {
+.content-container__selected-subscription {
   background-color: var(--color-background);
   border-radius: 16px;
   width: 428px;
   height: 83px;
   margin-top: 40px;
 }
-.home-page_content-container_selected-subscription i {
+.content-container__selected-subscription i {
   font-size: 24px;
   margin: 30px;
 }
-.home-page_content-container_selected-subscription_price {
+.content-container__price {
   color: var(--color-body-font);
   height: 50px;
   font-size: 14px;
@@ -371,19 +372,26 @@ template {
   border-left: 2px solid var(--color-stroke);
   line-height: 2px;
 }
-.home-page_content-container_selected-subscription_price h2 {
+.content-container__price h2 {
   font-size: 18px;
   color: var(--color-title);
 }
-.home-page_content-container_selected-subscription a {
+.content-container a {
   color: var(--color-primary);
   margin: 29px 32px 29px 0px;
   font-weight: bold;
 }
-.home-page_content-container_selected-subscription a:hover {
+.content-container a:hover {
   color: var(--color-hover);
 }
-.home-page_content-container_payment-confirmation {
+.content-container__cancel-order {
+  margin-top: 20px;
+  margin-bottom: 32px;
+  color: var(--color-title);
+  font-weight: bold;
+}
+
+.payment-confirmation {
   width: 428px;
   height: 56px;
   background-color: var(--color-primary);
@@ -393,124 +401,120 @@ template {
   color: var(--color-container);
   padding: 15px;
 }
-.home-page_content-container_payment-confirmation_btn-text {
+.payment-confirmation__btn-text {
   color: var(--color-container);
   margin-left: 15px;
 }
-.home-page_content-container_payment-confirmation_btn-text-none {
+.payment-confirmation__btn-text-none {
   display: none;
 }
-.home-page_content-container_payment-confirmation_btn-load {
+.payment-confirmation__btn-load {
   display: none;
 }
-.home-page_content-container_payment-confirmation_btn-load-active {
+.payment-confirmation__btn-load-active {
   display: block;
   color: var(--color-container);
   margin-left: 15px;
 }
-.home-page_content-container_payment-confirmation:hover {
+
+.payment-confirmation:hover {
   background-color: var(--color-hover);
 }
-.home-page_content-container_cancel-order {
-  margin-top: 20px;
-  margin-bottom: 32px;
-  color: var(--color-title);
-  font-weight: bold;
-}
+
 @media screen and (max-width: 1024px) {
-  .home-page_content-container {
+  .content-container {
     width: 343px;
   }
-  .home-page_content-container img {
+  .content-container img {
     width: 343px;
   }
-  .home-page_content-container_statement {
+  .content-container__statement {
     width: 311px;
     height: 93px;
     margin-top: 40px;
     font-size: 14px;
   }
-  .home-page_content-container_statement h1 {
+  .content-container__statement h1 {
     font-size: 24px;
   }
-  .home-page_content-container_selected-subscription {
+  .content-container__selected-subscription {
     width: 311px;
     height: 75px;
     margin-top: 32px;
   }
-  .home-page_content-container_selected-subscription i {
+  .content-container__selected-subscription i {
     font-size: 24px;
     margin: 25px;
   }
-  .home-page_content-container_selected-subscription_price {
+  .content-container__selected-subscription__price {
     height: 43px;
     font-size: 12px;
     padding-left: 24px;
     margin: 16px 0px 16px 0px;
   }
-  .home-page_content-container_selected-subscription_price h2 {
+  .content-container__selected-subscription__price h2 {
     font-size: 16px;
   }
-  .home-page_content-container_selected-subscription a {
+  .content-container__selected-subscription a {
     font-size: 14px;
     margin: 27px 24px 27px 0px;
   }
-  .home-page_content-container_payment-confirmation {
-    width: 311px;
-    height: 56px;
-  }
-  .home-page_content-container_cancel-order {
+  .content-container__selected-subscription__cancel-order {
     margin-top: 20px;
     margin-bottom: 24px;
     font-size: 14px;
   }
+  .content-container .payment-confirmation {
+    width: 311px;
+    height: 56px;
+  }
 }
-@media screen and (max-width: 280px) {
-  .home-page_content-container {
+@media screen and (max-width: 1024px) and (max-width: 280px) {
+  .content-container {
     width: 260px;
   }
-  .home-page_content-container img {
+  .content-container img {
     width: 260px;
   }
-  .home-page_content-container_statement {
+  .content-container__statement {
     width: 240px;
     height: 80px;
     margin-top: 32px;
     font-size: 12px;
   }
-  .home-page_content-container_statement h1 {
+  .content-container__statement h1 {
     font-size: 20px;
   }
-  .home-page_content-container_selected-subscription {
+  .content-container__selected-subscription {
     width: 240px;
     height: 60px;
     margin-top: 30px;
   }
-  .home-page_content-container_selected-subscription i {
+  .content-container__selected-subscription i {
     font-size: 18px;
     margin: 20px;
   }
-  .home-page_content-container_selected-subscription_price {
+  .content-container__price {
     height: 30px;
     font-size: 11px;
     padding-left: 18px;
     margin: 14px 0px 14px 0px;
   }
-  .home-page_content-container_selected-subscription_price h2 {
+  .content-container__price h2 {
     font-size: 14px;
   }
-  .home-page_content-container_selected-subscription a {
+  .content-container a {
     font-size: 12px;
     margin: 23px 18px 23px 0px;
   }
-  .home-page_content-container_payment-confirmation {
-    width: 240px;
-    height: 50px;
-    font-size: 14px;
-  }
-  .home-page_content-container_cancel-order {
+  .content-container__cancel-order {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 12px;
+  }
+  .payment-confirmation {
+    width: 240px;
+    height: 50px;
+    font-size: 14px;
   }
 }/*# sourceMappingURL=home-page.css.map */
